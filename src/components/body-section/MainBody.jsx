@@ -11,7 +11,8 @@ const images = [drive, slack, zoom, new1, new2];
 const MainBody = () => {
   return (
     <>
-      <div className="container mx-auto flex flex-col gap-y-16 justify-center items-center my-28">
+    {/* Integrate with your existing tools */}
+      <div className="container mx-auto flex flex-col sm:gap-y-4 md:gap-y-10 lg:gap-y-16 justify-center items-center sm:my-4 md:my-10 lg:my-28">
         <div className=" flex flex-col justify-center items-center text-[#565656] text-2xl lg:text-3xl">
           <h1>
             <span className="text-[#FFCA1D]">Integrate</span> with your existing
@@ -19,7 +20,7 @@ const MainBody = () => {
           </h1>
           <h1>in a few clicks</h1>
         </div>
-        <div className="flex flex-col gap-y-16">
+        <div className="flex flex-col gap-y-4 md:gap-y-6 lg:gap-y-16">
           <div className="flex flex-col gap-y-5 sm:flex-row sm: gap-x-4 items-center justify-center">
             {images.map((each) => {
               return (
@@ -33,7 +34,7 @@ const MainBody = () => {
               );
             })}
           </div>
-          <div className="flex items-center justify-center mt-5 hover:cursor-pointer">
+          <div className="flex items-center justify-center  mt-2 lg:mt-5 hover:cursor-pointer">
             <h1 className=" w-[150px] h-[50px] md:w-[180px] md:h-[60px] lg:w-[223px] lg:h-[70px] bg-[#FFCA1D] text-[#2C2C2C] text-1xl md:text-2xl rounded-lg flex items-center justify-center ">
               View All
             </h1>
@@ -41,12 +42,12 @@ const MainBody = () => {
         </div>
       </div>
       {/* --------------Save time with Automations------------------ */}
-      <div className="container mx-auto my-28">
+      <div className="container mx-auto my-6 md:my-10 lg:my-28">
         <div className="flex flex-col gap-y-7 mx-4 md:flex-row md:gap-x-14 justify-center items-center">
           <div className="w-80 md:w-[300px] lg:w-[370px] xl:w-[470px]">
             <img src={lady} alt="lady-image" />
           </div>
-          <div className=" flex flex-col gap-y-5 md:gap-y-7 md:w-[300px] lg:w-[400px] xl :w-[500px]">
+          <div className=" flex flex-col gap-y-3 md:gap-y-7 md:w-[300px] lg:w-[400px] xl :w-[500px]">
             <h1 className="text-[#4A4A4A] text-2xl">
               Save time with Automations
             </h1>
@@ -63,8 +64,8 @@ const MainBody = () => {
       </div>
       {/* -----------------Visualize work with Views --------------------*/}
 
-      <div className="max-w-[1840px] mx-auto my-28 bg-[#FAFAFF] py-4 md:py-6 lg:py-10 xl:py-20 2xl:py-28">
-        <div className="container flex flex-col gap-y-7 mx-4 md:flex-row md:gap-x-14 justify-center items-center">
+      <div className="max-w-[1840px] mx-auto my-6 md:my-10 lg:my-28 bg-[#FAFAFF] py-4 md:py-6 lg:py-10 xl:py-20 2xl:py-28">
+        <div className="container sm:mx-auto flex flex-col gap-y-7 mx-4 md:flex-row md:gap-x-14 justify-center items-center">
           <div className=" flex flex-col gap-y-5 md:gap-y-7 md:w-[300px] lg:w-[400px] xl :w-[500px]">
             <h1 className="text-[#4A4A4A] text-2xl">
               Visualize work with Views
@@ -84,8 +85,8 @@ const MainBody = () => {
 
       {/*.......... 24/7 Customer Support ...............*/}
 
-      <div className="container mx-auto my-28">
-        <div className=" flex flex-col md:flex-row md:gap-x-28 gap-y-10 justify-center items-center">
+      <div className="container mx-auto my-6 md:my-10 lg:my-28">
+        <div className=" flex flex-col mx-4 md:flex-row md:gap-x-28 gap-y-10 justify-center items-center">
           <div className="w-80 md:w-[300px] lg:w-[370px] xl:w-[470px] relative">
             <img src={man} alt="lady-image" />
             <div className="flex flex-col gap-y-4 bg-white w-[250px] h-[120px] lg:w-[300px] lg:h-[135px] xl:w-[360px] xl:h-[160px] p-4 shadow-lg shadow-gray-300 rounded-lg absolute left-28 top-64 md:top-60 lg:left-36 lg:top-[19rem] xl:top-[24rem] xl:left-44 ">
