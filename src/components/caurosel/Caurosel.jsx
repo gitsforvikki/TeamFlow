@@ -18,7 +18,7 @@ const Caurosel = () => {
   };
   return (
     <>
-      <div className="container mx-auto py-6 md:py-12 lg:py-20">
+      <div className="container mx-auto py-6 md:py-12 lg:py-20 overflow-hidden">
         <Slider {...settings}>
           <div className="w-full">
             <img src={img1} alt="img3" className="w-full " />
@@ -26,9 +26,6 @@ const Caurosel = () => {
           <div className="w-full">
             <img src={img2} alt="img2" className="w-full" />
           </div>
-          {/* <div className="w-full h-[380px]">
-            <img src={img4} alt="img4" className="w-full h-full" />
-          </div> */}
         </Slider>
       </div>
 
@@ -41,20 +38,18 @@ const Caurosel = () => {
             </h1>
             <h1 className="text-[#2D3150] text-xl lg:text-2xl">Company News</h1>
           </div>
-          <div className="w-[400px] h-[50px] md:w-[500px]  bg-white shadow-sm shadow-gray-200 flex justify-between">
-            <div className="flex items-center gap-x-2 mx-4">
-              <img src={email} alt=" email" className="w-7 h-7" />
-              <input
-                type="text"
-                placeholder="Your email"
-                className="outline-none"
-              />
+          <div className="flex justify-center">
+              <div className="flex justify-between shadow-lg bg-white p-1 rounded-xl">
+                <input
+                  type="text"
+                  placeholder="Your email"
+                  className="outline-none"
+                />
+                <div className=" bg-[#816AFF] text-white rounded-xl flex justify-center items-center px-4 py-2 hover:cursor-pointer">
+                  <img src={send} alt="send" className="w-7 h-7"  /><p>Subscribe</p>
+                </div>
+              </div>
             </div>
-            <div className=" bg-[#686DF1]  rounded-xl flex items-center justify-center gap-x-3 lg:gap-x-6 px-8 mx-6 hover:cursor-pointer">
-              <img src={send} alt=" send" className="w-7 h-7" />
-              <h1 className="text-sm text-white">Subscribe</h1>
-            </div>
-          </div>
         </div>
       </div>
     </>

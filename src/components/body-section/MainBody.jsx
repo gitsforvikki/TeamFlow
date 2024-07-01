@@ -1,3 +1,7 @@
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import drive from "../../../src/assets/body-images/drive.svg";
 import slack from "../../../src/assets/body-images/slack.svg";
 import zoom from "../../../src/assets/body-images/zoom.svg";
@@ -9,10 +13,50 @@ import visual from "../../../src/assets/body-images/visual.svg";
 const images = [drive, slack, zoom, new1, new2];
 
 const MainBody = () => {
+  let settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 768, // Adjusted breakpoint for 640px
+        settings: {
+          slidesToShow: 2,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          dots: false,
+        },
+      },
+    ],
+  };
   return (
     <>
-    {/* Integrate with your existing tools */}
-      <div className="container mx-auto flex flex-col sm:gap-y-4 md:gap-y-10 lg:gap-y-16 justify-center items-center sm:my-4 md:my-10 lg:my-28">
+      {/* Integrate with your existing tools */}
+      {/* <div className="container mx-auto flex flex-col sm:gap-y-4 md:gap-y-10 lg:gap-y-16 justify-center items-center sm:my-4 md:my-10 lg:my-28">
         <div className=" flex flex-col justify-center items-center text-[#565656] text-2xl lg:text-3xl">
           <h1>
             <span className="text-[#FFCA1D]">Integrate</span> with your existing
@@ -20,7 +64,7 @@ const MainBody = () => {
           </h1>
           <h1>in a few clicks</h1>
         </div>
-        <div className="flex flex-col gap-y-4 md:gap-y-6 lg:gap-y-16">
+        <div className="flex flex-col gap-y-4 md:gap-y-6 lg:gap-y-16 mx-6">
           <div className="flex flex-col gap-y-5 sm:flex-row sm: gap-x-4 items-center justify-center">
             {images.map((each) => {
               return (
@@ -39,6 +83,52 @@ const MainBody = () => {
               View All
             </h1>
           </div>
+        </div>
+      </div> */}
+      <div className="container mx-auto sm:my-4 md:my-10 lg:my-28 overflow-hidden">
+        <div className=" flex flex-col justify-center items-center text-[#565656] text-2xl lg:text-3xl">
+          <h1>
+            <span className="text-[#FFCA1D]">Integrate</span> with your existing
+            tools
+          </h1>
+          <h1>in a few clicks</h1>
+        </div>
+        <div className=" my-10">
+          <Slider {...settings}>
+            <div className="">
+              <img
+                src={drive}
+                alt="group-logo"
+                className="hover:cursor-pointer"
+              />
+            </div>
+            <div className="">
+              <img
+                src={slack}
+                alt="group-logo"
+                className="hover:cursor-pointer"
+              />
+            </div>
+            <div className="">
+              <img
+                src={zoom}
+                alt="group-logo"
+                className="hover:cursor-pointer"
+              />
+            </div>
+            <div className="">
+              <img
+                src={new1}
+                alt="group-logo"
+                className="hover:cursor-pointer"
+              />
+            </div>
+          </Slider>
+        </div>
+        <div className="flex items-center justify-center  mt-2 lg:mt-5 hover:cursor-pointer">
+          <h1 className=" w-[150px] h-[50px] md:w-[180px] md:h-[60px] lg:w-[223px] lg:h-[70px] bg-[#FFCA1D] text-[#2C2C2C] text-1xl md:text-2xl rounded-lg flex items-center justify-center ">
+            View All
+          </h1>
         </div>
       </div>
       {/* --------------Save time with Automations------------------ */}
@@ -63,26 +153,28 @@ const MainBody = () => {
         </div>
       </div>
       {/* -----------------Visualize work with Views --------------------*/}
-
-      <div className="max-w-[1840px] mx-auto my-6 md:my-10 lg:my-28 bg-[#FAFAFF] py-4 md:py-6 lg:py-10 xl:py-20 2xl:py-28">
-        <div className="container sm:mx-auto flex flex-col gap-y-7 mx-4 md:flex-row md:gap-x-14 justify-center items-center">
-          <div className=" flex flex-col gap-y-5 md:gap-y-7 md:w-[300px] lg:w-[400px] xl :w-[500px]">
-            <h1 className="text-[#4A4A4A] text-2xl">
-              Visualize work with Views
-            </h1>
-            <div className="w-12 h-1 bg-[#686DF1]"></div>
-            <div className="text-[#575757] leading-8 text-lg lg:text-xl">
-              View data as a map, calendar, timeline, kanban, and more The
-              easy-to-use, visual interface lets any team member jump in and get
-              started, no training required.
+      <div className="bg-[#FAFAFF] ">
+        <div className="container mx-auto my-6 md:my-10 lg:my-28">
+          <div className="flex flex-col gap-y-7 mx-4 md:flex-row md:gap-x-14 justify-center items-center">
+            <div className=" flex flex-col gap-y-3 md:gap-y-7 md:w-[300px] lg:w-[400px] xl :w-[500px]">
+              <h1 className="text-[#4A4A4A] text-2xl">
+                Visualize work with Views
+              </h1>
+              <div className="w-12 h-1 bg-[#686DF1]"></div>
+              <div className="text-[#575757] leading-8 text-lg lg:text-xl">
+                Automate the repetitive work in seconds so you can avoid human
+                error and focus on what matters. It gives the impression of
+                software that its highly automated which implies that it is good
+                for client for who want to save time and manage team members
+                easily.
+              </div>
             </div>
-          </div>
-          <div className="w-80 md:w-[300px] lg:w-[370px] xl:w-[470px]">
-            <img src={visual} alt="lady-image" />
+            <div className="w-80 md:w-[300px] lg:w-[370px] xl:w-[470px]">
+              <img src={visual} alt="lady-image" />
+            </div>
           </div>
         </div>
       </div>
-
       {/*.......... 24/7 Customer Support ...............*/}
 
       <div className="container mx-auto my-6 md:my-10 lg:my-28">
