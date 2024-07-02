@@ -7,7 +7,6 @@ import MainBody from "./components/body-section/MainBody";
 import Footer from "./components/footer/Footer";
 import Caurosel from "./components/caurosel/Caurosel";
 import titleIcon from "../src/assets/titleIcon.svg";
-import Carousel from "./components/body-section/Carousel";
 
 function App() {
   const [isHidden, setIsHidden] = useState(true);
@@ -15,9 +14,9 @@ function App() {
     setIsHidden(!isHidden);
   };
   return (
-    <>
+    <div div className="overflow-hidden">
       <div className={!isHidden ? "mb-28" : ""}>
-        <div className=" relative bg-[#4B4AEF] lg:bg-transparent flex flex-col h-[977px] lg:h-fit">
+        <div className=" relative bg-[#4B4AEF] lg:bg-transparent flex flex-col h-[700px] xs:h-[900px] sm:h-[1000px] md:h-[1100px] lg:h-fit">
           <div
             onClick={handleClick}
             className="flex justify-between  w-full pt-1 sm:pt-0  "
@@ -34,7 +33,7 @@ function App() {
               </div>
             </div>
           </div>
-          <img src={bg} className="w-3/4" alt="bg" />
+          <img src={bg} className="w-3/4"  alt="bg" />
           <div className="absolute top-6  w-full">
             <div className={isHidden ? "hidden sm:block" : ""} id="menu">
               <Navbar />
@@ -43,11 +42,11 @@ function App() {
           </div>
         </div>
       </div>
-      <Features />
+      <Features isHidden={isHidden} />
       <MainBody />
       <Caurosel />
       <Footer />
-    </>
+    </div>
   );
 }
 

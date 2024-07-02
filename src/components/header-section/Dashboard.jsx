@@ -1,14 +1,14 @@
-import Group from "../../../src/assets/Group.svg";
+import Group from "../../../src/assets/Group1.svg";
 
 const Dashboard = () => {
   return (
     <>
       <div className="container mx-auto flex flex-col gap-y-10 lg:flex-row lg:justify-around mt-16  ">
         <div className="px-6  mt-6 md:mt-10 lg:mt-14">
-          <span className="px-3 py-2 text-4xl bg-white text-gray-500 rounded-md">
+          <span className="px-3 py-2  bg-white text-gray-500 rounded-md">
             Welcome to TeamFlow
           </span>
-          <div className="text-white text-2xl md:text-2xl lg:text-3xl xl:text-5xl font-bold  mt-4 lg:mt-14">
+          <div className="text-white text-2xl md:text-2xl lg:text-3xl xl:text-7xl font-bold  mt-4 lg:mt-14">
             <h1>Work the way that</h1>
             <h1>works for you</h1>
           </div>

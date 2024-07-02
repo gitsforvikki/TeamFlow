@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.customer-support{
+    @apply  flex flex-col gap-y-4 bg-white w-[250px] h-[120px] lg:w-[300px] lg:h-[135px] xl:w-[360px] xl:h-[160px] p-4 shadow-lg shadow-gray-300 rounded-lg absolute left-28 top-64 md:top-60 lg:left-36 lg:top-[19rem] xl:top-[24rem] xl:left-44
+}

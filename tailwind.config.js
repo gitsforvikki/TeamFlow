@@ -7,6 +7,9 @@ export default {
         primary: "#4B4AEF",
         secondry: "#FFCA1D",
       },
+      screens: {
+        'xs': '400px', // new smaller breakpoint
+      },
       backgroundImage: {
         "hero-pattern": "url('/public/Rectangle1.png')",
       },
